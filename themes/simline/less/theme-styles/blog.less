@@ -1,0 +1,86 @@
+/*------------------------------------------------------------------
+Project:    Oneline
+Author:     Yevgeny S.
+URL:        https://twitter.com/YevSim
+Version:    1.0
+Created:        28/04/2014
+Last change:    22/07/2014
+-------------------------------------------------------------------*/
+
+
+/* ===== Blog ===== */
+
+.blog {
+    margin-bottom: 10px;
+}
+.blog > img {
+    .size(70px, 70px);
+    border-radius: 70px;
+    float: left;
+    margin-right: 20px;
+}
+@media (max-width: @screen-xs-max) {
+    .blog > img {
+        display: none;
+    }
+}
+.blog-desc {
+    overflow: hidden;
+}
+.blog-desc > .blog-title {
+    margin-top: 0;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-transform: capitalize;
+}
+.blog-desc > .blog-title a {
+    color: @new-gray;
+    .transition-new(color);
+}
+.blog-desc > .blog-title a:hover {
+    color: @new-red;
+    text-decoration: none;
+}
+.blog-desc > p {
+    margin-bottom: 30px;
+}
+.blog-desc .blog-img {
+    border-radius: 3px;
+    margin: 20px 0;
+}
+
+/*** Top Stories ***/
+
+.top-stories {
+    margin-bottom: 40px;
+}
+.top-stories .item {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed @new-gray-lighter;
+}
+.top-stories img {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-right: 10px;
+}
+.top-stories .text {
+    overflow: hidden;
+    font-size: 13px;
+    color: @new-gray-light;
+}
+.top-stories h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 1.6;
+    text-transform: capitalize;
+}
+.top-stories h3 > a {
+    color: @new-gray-light;
+}
+.top-stories h3 > a:hover {
+    text-decoration: none;
+}

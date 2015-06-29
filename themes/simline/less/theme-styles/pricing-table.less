@@ -1,0 +1,65 @@
+/*------------------------------------------------------------------
+Project:    Oneline
+Author:     Yevgeny S.
+URL:        https://twitter.com/YevSim
+Version:    1.0
+Created:        28/04/2014
+Last change:    22/07/2014
+-------------------------------------------------------------------*/
+
+
+/* ===== Pricing Options ===== */
+
+.pricing-options {
+    width: 100%;
+    margin-top: 30px;
+    background: white;
+    border: 1px solid @new-gray-lighter;
+    border-right: 0;
+    .box-shadow(0 0 6px rgba(0,0,0,.05));
+}
+.pricing-option {
+    width: 25%;
+    float: left;
+    padding: 30px 10px;
+    border-right: 1px solid @new-gray-lighter;
+    text-align: center;
+    .box-sizing(border-box);
+}
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .pricing-option {
+        width: 50%;
+        border-bottom: 2px solid @new-gray-lighter;
+    }
+}
+@media (max-width: @screen-xs-max) {
+    .pricing-option {
+        width: 100%;
+        float: none;
+        border-bottom: 2px solid @new-gray-lighter;
+    }
+}
+.pricing-option h2 {
+    margin: 0 0 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.pricing-option > .price {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center;
+    color: @new-red;
+}
+.pricing-option > .price > span {
+    font-size: 16px;
+}
+.pricing-option > ul {
+    border-top: 1px solid @new-gray-lighter;
+    list-style-type: none;
+    padding: 20px 0;
+}
+.pricing-option > ul > li {
+    display: block;
+    padding: 5px 5px;
+}

@@ -1,0 +1,132 @@
+/*------------------------------------------------------------------
+Project:    Oneline
+Author:     Yevgeny S.
+URL:        https://twitter.com/YevSim
+Version:    1.0
+Created:        28/04/2014
+Last change:    22/07/2014
+-------------------------------------------------------------------*/
+
+/* ===== Timeline ===== */
+
+.timeline {
+    position: relative;
+    list-style-type: none;
+    padding: 10px 0;
+    margin-bottom: 40px;
+    height: auto;
+    overflow: hidden;
+}
+.timeline:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    content: "";
+    border-left: 1px solid @new-gray-lighter;
+    z-index: -1;
+}
+.timeline > .year {
+    text-align: center;
+}
+.timeline > .year > span{
+    display: inline-block;
+    padding: @padding-base-vertical @padding-base-horizontal;
+    margin: 0 0 20px;
+    border-radius: @border-radius-base;
+    background-color: @new-gray;
+    font-weight: 700;
+    color: white;
+    z-index: 1;
+}
+.timeline > .event {
+    position: relative;
+    width: 50%;
+    padding: 10px 40px 10px 10px;
+    margin-bottom: 40px;
+    text-align: right;
+    float: left;
+    clear: left;
+}
+.timeline > .event:nth-child(2n) {
+    padding: 10px 10px 10px 40px;
+    margin-bottom: 0;
+    margin-top: 40px;
+    text-align: left;
+    float: right;
+    clear: right;
+}
+.timeline > .event:after {
+    position: absolute;
+    content: "\f10c";
+    font-family: "FontAwesome";
+    top: 10px;
+    right: -6px;
+    background: white;
+    color: @new-red;
+}
+.timeline > .event:nth-child(2n):after {
+    right: auto;
+    left: -6px;
+}
+.timeline > .event:hover {
+    cursor: pointer;
+}
+.timeline > .event:hover h3 {
+    color: @new-red;
+}
+.timeline > .event:hover:after {
+    content: "\f111";
+}
+.timeline > .event > h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    .transition-new(color);
+}
+.timeline > .event > time {
+    display: block;
+    color: @new-gray-light;
+    margin-bottom: 10px;
+}
+.timeline > .event > time:before {
+    content: "\f073";
+    font-family: FontAwesome;
+    color: @new-blue;
+    margin-right: 5px;
+}
+.timeline > .event > p {
+    color: @new-gray-light;
+}
+.timeline > .event > p > img {
+    margin-bottom: 10px;
+}
+
+@media (max-width: @screen-xs-max) {
+    .timeline:before {
+        left: 6px;
+    }
+    .timeline > .year {
+        margin-left: 6px;
+        text-align: left;
+    }
+    .timeline > .year > span{
+        border-radius: 0 @border-radius-base @border-radius-base 0;
+        margin: 0 0 30px;
+    }
+    .timeline > .event,
+    .timeline > .event:nth-child(2n) {
+        width: 100%;
+        padding: 0;
+        margin: 0 0 30px 26px;
+        text-align: left;
+        float: none;
+        clear: none;
+    }
+    .timeline > .event:after,
+    .timeline > .event:nth-child(2n):after {
+        top: 0;
+        left: -26px;
+        right: auto;
+    }
+}

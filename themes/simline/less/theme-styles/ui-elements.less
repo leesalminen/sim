@@ -1,0 +1,69 @@
+/*------------------------------------------------------------------
+Project:    Oneline
+Author:     Yevgeny S.
+URL:        https://twitter.com/YevSim
+Version:    1.0
+Created:        28/04/2014
+Last change:    22/07/2014
+-------------------------------------------------------------------*/
+
+.ui-body {
+    position: relative;
+}
+
+/* ===== Sidebar ===== */
+
+.bs-sidebar {
+    margin-bottom: 50px;
+}
+.bs-sidebar.affix {
+    position: static;
+}
+@media (min-width: @screen-md-min) {
+    .bs-sidebar .nav > .active > ul {
+        display: block;
+    }
+    .bs-sidebar.affix,
+    .bs-sidebar.affix-bottom {
+        width: 213px;
+    }
+    .bs-sidebar.affix {
+        position: fixed;
+        top: 110px;
+    }
+    .bs-sidebar.affix-bottom {
+        position: absolute;
+    }
+}
+@media (min-width: @screen-lg-min) {
+    .bs-sidebar.affix-bottom,
+    .bs-sidebar.affix {
+        width: 220px;
+    }
+}
+
+/* ===== Buttons ===== */
+
+@media (max-width: @screen-xs-max) {
+    .popover_demo .btn, 
+    .tooltip_demo .btn, 
+    .btn_demo.btn {
+        margin-bottom: 5px;
+    }
+}
+
+/* ===== Brand Links ===== */
+
+.brand-links {
+    padding-left: 0;
+}
+.brand-links > li {
+    list-style-type: none;
+}
+
+/* ===== Embed Responsive ===== */
+
+.embed-responsive_demo {
+    margin-bottom: 10px;
+}
+

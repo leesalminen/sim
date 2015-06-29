@@ -1,0 +1,5 @@
+VersionTruncator:
+  version_limit: 3
+  draft_limit: 3
+  delete_old_page_types: false
+  vacuum_tables: false

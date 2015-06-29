@@ -1,0 +1,40 @@
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+.clearfix:after {
+  clear: both;
+}
+.defaultSkin a.mce_shortcodes{
+	width: auto;
+	max-width: 100%;
+	cursor: pointer !important;
+}
+.defaultSkin a.mce_shortcodes span, .defaultSkin a.mce_shortcodes span img{
+	width: auto !important;
+	cursor: pointer !important;
+	border-radius: 3px;
+}
+
+.icon.icon-16.icon-tsadmin{
+	background-image: url('../images/icons/box-16.png') !important;
+	background-position: 0 0 !important;
+}
+
+.plw-select-page .middleColumn div.chzn-container-multi, .chzn-drop{
+	width: 90% !important;
+	max-width: 90% !important;
+}
+
+.field input.ui-autocomplete-loading{
+	background: #FFF url('../images/ajax-spinner-16.gif') no-repeat right center;
+}

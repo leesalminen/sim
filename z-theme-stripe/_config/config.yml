@@ -1,0 +1,61 @@
+# always ?flush=1 when changing config yaml
+SiteConfig:
+  extensions:
+    - SiteConfigDecorator
+Member:
+  extensions:
+    - MemberDecorator
+SiteTree:
+  extensions:
+    - CommentsExtension
+Page:
+  extensions:
+    - PageDecorator
+    - WidgetPageExtension
+Page_Controller:
+  extensions:
+    - PageControllerDecorator
+Blog:
+  extensions:
+    - BlogDecorator
+Blog_Controller:
+  extensions:
+    - Blog_Controller_Decorator
+BlogPost:
+  extensions:
+    - BlogPostDecorator
+DBField:
+  extensions:
+    - DBFieldDecorator
+Widget:
+  extensions:
+    - WidgetDecorator
+  AllowContentOn:
+    - HTMLContentWidget
+SharedCategory:
+  Types:
+    - ClassName: Testimonial
+      Label: Testimonial
+    - ClassName: Client
+      Label: Client
+ThemeStripe:
+  Assets:
+    simline: # theme name and it owns assets
+      css:
+        - css/font-awesome.min.css
+        - css/animate.css
+        - css/swipebox.min.css
+        - css/style.css
+      js:
+        - 'https://platform.twitter.com/widgets.js'
+        - 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'
+        - javascript/vendor/bootstrap.min.js
+        - javascript/vendor/scrolltopcontrol.js
+        - javascript/vendor/jquery.matchHeight-min.js
+        - javascript/vendor/jquery.swipebox.min.js
+        - javascript/main.js
+  CombinedDir: /_combined
+#---- CMS Admin ---#
+LeftAndMain:
+  extra_requirements_css:
+    - z-theme-stripe/assets/css/cms.css

@@ -1,0 +1,67 @@
+/*------------------------------------------------------------------
+Project:    Oneline
+Author:     Yevgeny S.
+URL:        https://twitter.com/YevSim
+Version:    1.0
+Created:        28/04/2014
+Last change:    22/07/2014
+-------------------------------------------------------------------*/
+
+/* ===== Template Pages & Portfolio ===== */
+
+.portfolio-block {
+    margin-bottom: 40px;
+}
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid @new-gray-lighter;
+    background: white;
+    .transition-new(background);
+}
+.portfolio-item:hover {
+    background: #333;
+}
+.portfolio-item > a {
+    color: @new-gray;
+    text-decoration: none;
+}
+.portfolio-item .img {
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-item .img > img {
+    .transition-new(all, 250ms);
+}
+.portfolio-item:hover .img > img {
+    margin-top: -65px;
+    padding-bottom: 65px;
+}
+.portfolio-item .info {
+    position: absolute;
+    height: 65px;
+    bottom: -65px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    .transition-new(all);
+    .opacity(0);
+}
+.portfolio-item:hover .info{
+    bottom: 0;
+    .opacity(1);
+}
+.portfolio-item .info > h4 {
+    margin-top: 0;
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+}
+.portfolio-item .info > p {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+}

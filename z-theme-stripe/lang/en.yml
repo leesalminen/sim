@@ -1,0 +1,103 @@
+en:
+  TSGeneral:
+    TITLE: 'Title'
+    CONTENT: 'Content'
+    PAGE: 'Page'
+    LINK: 'Link'
+    LINKBEHAVIOUR: 'Link Behaviour'
+    FBURL: 'Facebook URL'
+    GPURL: 'Google+ URL'
+    TWURL: 'Twitter URL'
+    PIURL: 'Pinterest URL'
+    DATE: 'Date'
+    FEATURED: 'Featured'
+    HEADINGTEXT: 'Heading text'
+    LEAVEEMPTYTOHIDESECTION: 'Leave empty to hide this section.'
+    IMAGE: 'Image'
+    IMAGES: 'Images'
+    CATEGORY: 'Category'
+    CATEGORIES: 'Categories'
+    ENABLE: 'Enable'
+    FEATUREDONLY: 'Only shows featured items.'
+    ITEMS2SHOW_ZERO2DISABLE: 'Amount of items to show. 0 = shows nothing.'
+  TSPerm:
+    CREATE: 'Create'
+    EDIT: 'Edit'
+    VIEW: 'View'
+    DELETE: 'Delete'
+  SharedCategory:
+    CATEGORY: 'Category'
+    TYPE: 'Type'
+    TITLE: 'Title'
+    TITLEDESC: 'This text will be the heading text of the list of items which associate with this category'
+    CMSLABEL: 'CMS Label'
+    CMSLABELDESC: 'Text to show in the CMS for discerning purpose only.'
+    SELECTTOSHOW: '--- Select to show ---'
+    NUMITEMSTOSHOW: 'Number of items to show.'
+    NUMITEMSTOSHOWZERO: 'Number of items to show. 0 means show all.'
+    SHOWFEATUREDONLY: 'Show featured items only.'
+    PERMCATEGORY: 'Shared Category'
+    PERMHELPCREATE: 'Ability to create new shared category record'
+    PERMHELPEDIT: 'Ability to edit a shared category record'
+    PERMHELPDELETE: 'Ability to delete shared category record(s)'
+  Box:
+    ICONCLASS: 'HTML icon class'
+    HTMLCLASS: 'HTML class'
+    CHOOSEPAGETOCONNECT: 'Choose page to connect with...',
+    ORFILLLINK: 'or you may manually fill the url to connect here.',
+  Testimonial:
+    AUTHOR: 'Author name'
+    PHOTO: 'Author picture'
+    COMPANY: 'Company name'
+    TITLE: 'Subject'
+    COMMENT: 'Comment'
+    DATE: 'Date'
+  TeamPerson:
+    NAME: 'Name'
+    JOBTITLE: 'Job title'
+    BIOGRAPHY: 'Biography'
+    PHOTO: 'Photo'
+  FAQ:
+    QUESTION: 'Question'
+    QUESTIONS: 'Questions'
+    ANSWER: 'Answer'
+    ANSWERS: 'Answers'
+    ADDITEM: 'Add Question &amp; Answer'
+  Widget:
+    SIDEBARTAB: 'Sidebar'
+    SUFFIXCLASS: 'Suffix class'
+    TITLE: 'Title'
+    ENABLE: 'Enable'
+    HTMLCONTENT: 'HTML content'
+    INHERITFROMPARENT: 'Inherit sidebar from parent page'
+  SearchForm:
+    SEARCH: ''
+  Comments:
+    ACTAPPROVE: 'Approve'
+    ACTSPAM: 'Mark as spam'
+    ACTISNTSPAM: 'Mark as not spam'
+    ACTREMOVE: 'Remove'
+  ContactPage:
+    HEADING1: 'Main heading'
+    HEADING2: 'Address heading'
+    HEADING3: 'Contact information heading'
+    CONTACTPHONE: 'Phone number'
+    CONTACTFAX: 'Fax number'
+    CONTACTEMAIL: 'Email address'
+    EMBEDMAPURL: 'Map URL'
+    EMBEDMAPURLDESC: 'Embed URL of the map'
+    ONCOMPLETEHEADING: 'Heading on completion'
+  Portfolio:
+    SHORTDESC: 'Short description'
+    LUMBERJACKLABEL: 'Items'
+  HelpPage:
+    LUMBERJACKLABEL: 'Articles'
+  Timeline:
+    LUMBERJACKLABEL: 'Events'
+    EVENTPERPAGEDESC: 'Numbers of event showing on a page.'
+  EditableFormField:
+    CUSTOMNAME: 'Custom field name'
+    CUSTOMNAMEDESC: "This field will not show on the frontend by default. <br/> It's useful if you'd like to change field layout by using if-else statement."
+  ###-- Template ---###
+  HeaderSS:
+    LOGIN: Login

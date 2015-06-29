@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>{#shortcodes_dlg.title}</title>
+		<script language="javascript" type="text/javascript" src="../../../../../framework/thirdparty/tinymce/tiny_mce_popup.js"></script>
+		<script language="javascript" type="text/javascript" src="../../../../../framework/thirdparty/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="js/dialog.js"></script>
+		<script type="text/javascript" src="js/videoUrlParser.js"></script>
+	</head>
+	
+	<body>
+		
+		<div class="type-selection" style="text-align: center; margin-bottom: 5px;">
+			<select name="type-list" id="type-list" onchange="changeType(this);">
+				<option value="">--- select from the list ---</option>
+				<option value="button">Button</option>
+				<option value="video">Video</option>
+				<option value="fluid-table">Fluild table</option>
+			</select>
+		</div><!-- end of .type-selection -->
+		
+		<form onsubmit="ShortCodesDialog.insert(); return false;" action="#">
+			<div id="type-fields">&nbsp;</div>
+			
+			<div class="mceActionPanel" style="display: none;">
+				<input type="button" id="insert" name="insert" value="{#insert}" onclick="ShortCodesDialog.insert();" />
+				<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+			</div>
+		</form>
+		
+		<div class="hidden-area" style="display: none">
+			<div id="type-button">
+				<h3 style="margin-bottom: 10px">Insert a button</h3>
+				
+				<table cellspacing="0" cellpadding="4" border="0">
+					<tbody>
+						<tr>
+							<td class="nowrap">
+								<label for="Button_text">Button text</label>
+							</td>
+							<td style="width: 80%">
+								<input type="text" aria-required="true" style="width: 99%" value="" id="Button_text" name="Button_text" class="mceFocus" />
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="nowrap">
+								<label for="Button_link">Link</label>
+							</td>
+							<td>
+								<input type="text" style="width: 99%" value="" id="Button_link" name="Button_link" class="mceFocus" />
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="nowrap">
+								<label for="Button_classes">Button class</label>
+							</td>
+							<td>
+								<input type="text" style="width: 99%" value="btn btn-grand btn-block btn-blue" id="Button_classes" name="Button_classes" class="mceFocus" />
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="nowrap">
+								<label for="Button_wrapper_class">Wrapper class</label>
+							</td>
+							<td>
+								<input type="text" style="width: 99%" value="" id="Button_wrapper_class" name="Button_wrapper_class" class="mceFocus" />
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="nowrap">
+								<label for="Button_icon_class">Icon class</label>
+							</td>
+							<td>
+								<input type="text" style="width: 99%" value="" id="Button_icon_class" name="Button_icon_class" class="mceFocus" />
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="nowrap">
+								<label for="Button_new_window">Open in new window</label>
+							</td>
+							<td>
+								<input type="checkbox" id="Button_new_window" name="Button_new_window" value="1" />
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="nowrap">
+								<label for="Button_nofollow">No-follow</label>
+							</td>
+							<td>
+								<input type="checkbox" id="Button_nofollow" name="Button_nofollow" value="1" />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- end of #type-button -->
+			
+			<div id="type-video">
+				<h3 style="margin-bottom: 10px">Insert a video</h3>
+				<p>
+					Supports services: Youtube, Vimeo and Dailymotion.
+				</p>
+				
+				<table cellspacing="0" cellpadding="4" border="0">
+					<tbody>
+						<tr>
+							<td class="nowrap">
+								<label for="Video_url">Video url</label>
+							</td>
+							<td style="width: 80%">
+								<input type="text" aria-required="true" style="width: 99%" value="" id="Video_url" name="Video_url" class="mceFocus" />
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="nowrap">
+								<label for="Video_width">Width</label>
+							</td>
+							<td>
+								<input type="text" style="width: 60px" value="480" id="Video_width" name="Video_width" class="mceFocus" />
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="nowrap">
+								<label for="Video_height">Height</label>
+							</td>
+							<td>
+								<input type="text" style="width: 60px" value="320" id="Video_height" name="Video_height" class="mceFocus" />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- end of #type-video -->
+			
+			<div id="type-fluid-table">
+				<h3 style="margin-bottom: 10px">Insert a fluid table</h3>
+				
+				<table cellspacing="0" cellpadding="4" border="0">
+					<tbody>
+						<tr>
+							<td class="nowrap">
+								<label for="Fluid_table_columns">Numbers of column</label>
+							</td>
+							<td>
+								<select name="Fluid_table_columns" id="Fluid_table_columns">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+								</select>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="nowrap">
+								<label for="Fluid_table_rows">Numbers of row</label>
+							</td>
+							<td>
+								<input type="text" style="width: 60px" value="1" id="Fluid_table_rows" name="Fluid_table_rows" class="mceFocus" />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- end of #type-video -->
+			
+		</div><!-- end of .hidden-area -->
+	</body>
+</html>

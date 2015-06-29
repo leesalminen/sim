@@ -1,0 +1,80 @@
+/*------------------------------------------------------------------
+Project:    Oneline
+Author:     Yevgeny S.
+URL:        https://twitter.com/YevSim
+Version:    1.0
+Created:        28/04/2014
+Last change:    22/07/2014
+-------------------------------------------------------------------*/
+
+
+/* ===== Contact Us Map ===== */
+@map-height: 400px;
+
+#map_canvas {
+    width: 100%;
+    height: @map-height;
+    margin: -40px auto 40px;
+    background: gray;
+	position: relative;
+}
+
+#map_canvas iframe{
+	width: 100%;
+	height: @map-height;
+	border: none;
+	overflow: hidden;
+}
+
+#map_canvas .touchable-area{
+	position: absolute;
+	top: 0;
+	height: @map-height;
+	width: 30px;
+	background: #FFF;
+	background: rgba(255,255,255,0.6);
+}
+
+#map_canvas .touchable-area-left{
+	left: 0;
+}
+
+#map_canvas .touchable-area-right{
+	right: 0;
+}
+
+/* ===== Contact Info ===== */
+
+.contact-info {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+.contact-info > li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #ddd;
+}
+.contact-info .fa {
+    float: left;
+    margin-top: 10px;
+    font-size: 28px;
+}
+.contact-info-content {
+    overflow: hidden;
+    margin-left: 45px;
+}
+.contact-info-content .title {
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.contact-info-content .description {
+    font-size: @font-size-base - 1px;
+}
+
+/* ===== Contact Us Form ===== */
+
+@media (max-width: @screen-xs-max) {
+    .form-control.form-control_xs-margin {
+        margin-bottom: 15px;
+    }
+}
