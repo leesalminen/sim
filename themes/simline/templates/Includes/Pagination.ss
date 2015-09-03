@@ -5,7 +5,7 @@
 	<ul class="pagination">
 		<% if $NotFirstPage %>
 			<li>
-				<a href="$$PrevLink" title="View the previous page">
+				<a href="$PrevLink" title="View the previous page">
 					<i class="fa fa-long-arrow-left"></i> Previous
 				</a>
 			</li>
@@ -35,7 +35,7 @@
 	
 		<% if $NotLastPage %>
 			<li>
-				<a class="next paginate-right" href="$$NextLink" title="View the next page">
+				<a class="next paginate-right" href="$NextLink" title="View the next page">
 					Next <i class="fa fa-long-arrow-right"></i>
 				</a>
 			</li>
