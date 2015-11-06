@@ -10,8 +10,8 @@ SiteTree:
     - CommentsExtension
 Page:
   extensions:
-    - PageDecorator
     - WidgetPageExtension
+    - PageDecorator
 Page_Controller:
   extensions:
     - PageControllerDecorator
